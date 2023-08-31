@@ -50,7 +50,7 @@ export const ConfirmarModal = ({
                   days: 0,
                   link: link,
                   comment: comment,
-                  status: state === "error" ? "RECHAZADA" : "PENDIENTE_USER",
+                  status: state === "error" ? "REJECTED" : "PENDING_USER",
                 });
               }}
               className="mt-4"

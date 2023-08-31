@@ -66,15 +66,15 @@ export const Profile = () => {
         let pending = [];
         let rejected = [];
         resp.data.contenido.trainings.forEach((training) => {
-          if (training.status === "APROBADA") {
+          if (training.status === "APPROVED") {
             approbed.push(training);
             return;
           }
-          if (training.status.slice(0, 9) === "PENDIENTE") {
+          if (training.status.slice(0, 7) === "PENDING") {
             pending.push(training);
             return;
           }
-          if (training.status === "RECHAZADA") rejected.push(training);
+          if (training.status === "REJECTED") rejected.push(training);
         });
         setApprobedTrainings(approbed);
         setPendingTrainings(pending);

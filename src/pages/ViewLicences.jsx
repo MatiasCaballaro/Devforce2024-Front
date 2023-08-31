@@ -36,7 +36,7 @@ export const ViewLicences = () => {
         let licencedUsers = [];
 
         respTrainings.forEach((training) => {
-          if (training.status === "APROBADA") {
+          if (training.status === "APPROVED") {
             let index = licencedUsers.findIndex(
               (user) => user.id === training.userId.id
             );

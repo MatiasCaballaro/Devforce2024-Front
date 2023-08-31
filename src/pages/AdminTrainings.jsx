@@ -182,7 +182,7 @@ export const AdminTrainings = () => {
                         <tr
                           key={soli.id}
                           className={`bg-white${
-                            soli.status == "PENDIENTE USER" ? "" : " border-b"
+                            soli.status == "PENDING USER" ? "" : " border-b"
                           }`}
                           onClick={() => {
                             navigate(`/training/${soli.id}`);
