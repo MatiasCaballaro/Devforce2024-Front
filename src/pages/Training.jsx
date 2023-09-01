@@ -141,7 +141,7 @@ export const Training = () => {
                   <b>Training del área:</b> {training.area.toLowerCase()}
                 </p>
                 <p>
-                  <b>Ceada por: </b>
+                  <b>Creada por: </b>
                   {training.userId.firstname + " " + training.userId.lastname}
                 </p>
                 <p>
@@ -167,7 +167,7 @@ export const Training = () => {
                         </a>
                       )}
                       <span>
-                        {training.mentorId.firstname +
+                        {training.mentorId.firstname + ' ' +
                           training.mentorId.lastname}
                       </span>
                     </div>
@@ -190,7 +190,7 @@ export const Training = () => {
                         </a>
                       )}
                       <span>
-                        {training.adminId.firstname + training.adminId.lastname}
+                        {training.adminId.firstname + ' ' + training.adminId.lastname}
                       </span>
                     </div>
                   ) : (
