@@ -41,6 +41,7 @@ export const MisTrainings = () => {
         asd.forEach((training) => {
           delete training.userId;
           training.status = training.status.replace("_", " ");
+          /*
           training.creationDate = training.creationDate.slice(0, -16);
           training.creationDate = `${training.creationDate.substring(
             8,
@@ -49,7 +50,8 @@ export const MisTrainings = () => {
             5,
             7
           )}-${training.creationDate.substring(0, 4)}`;
-
+          */
+          training.creationDate = formatDate(training.creationDate);
           if (training.mentorId) {
             training.mentorId.name = `${training.mentorId.firstname} ${training.mentorId.lastname}`;
             delete training.mentorId.role;
@@ -266,7 +268,7 @@ export const MisTrainings = () => {
                               </span>
                             </td>
                             <td scope="col">
-                              <span>{formatDate(soli.creationDate)}</span>
+                              <span>{soli.creationDate}</span>
                             </td>
                             <td className="actions" scope="col">
                               <button
