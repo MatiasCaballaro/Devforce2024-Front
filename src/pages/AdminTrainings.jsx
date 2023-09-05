@@ -258,7 +258,7 @@ export const AdminTrainings = () => {
                                       </a>
                                     )}
                                     <span>
-                                      {soli.userId.firstname +
+                                      {soli.userId.firstname + ' ' +
                                         soli.userId.lastname}
                                     </span>
                                   </div>
@@ -282,7 +282,7 @@ export const AdminTrainings = () => {
                                       </a>
                                     )}
                                     <span>
-                                      {soli.mentorId.firstname +
+                                      {soli.mentorId.firstname + ' ' +
                                         soli.mentorId.lastname}
                                     </span>
                                   </div>
