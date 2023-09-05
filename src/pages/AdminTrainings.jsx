@@ -10,6 +10,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { sortTable } from "../helpers/sortTable";
 import { findSearch } from "../helpers/search";
+import formatDate from "../helpers/formatDate";
 
 export const AdminTrainings = () => {
   const {
@@ -289,7 +290,7 @@ export const AdminTrainings = () => {
                               </span>
                             </td>
                             <td scope="col">
-                              <span>{soli.creationDate}</span>
+                              <span>{formatDate(soli.creationDate)}</span>
                             </td>
                             <td className="actions" scope="col">
                               <button
