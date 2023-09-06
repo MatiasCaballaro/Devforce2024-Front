@@ -1,3 +1,4 @@
+
 import axios from "axios";
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +14,7 @@ export const CreateUser = () => {
   const [area, setArea] = useState("");
   const [phone, setPhone] = useState("");
   const [teams, setTeams] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // Estado para mostrar/ocultar contraseña
 
   const navigate = useNavigate();
 
@@ -132,14 +134,25 @@ export const CreateUser = () => {
               <span>
                 Contraseña: <strong className="text-red-400">*</strong>
               </span>
-              <input
-                type="text"
-                name="password"
-                placeholder="Escribí la contraseña"
-                value={password}
-                onChange={(ev) => setPassword(ev.target.value)}
-                required
-              />
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"} // Cambio de tipo de entrada
+                  name="password"
+                  style={{ width: '81%' }}
+                  placeholder="Escribí la contraseña"
+                  value={password}
+                  onChange={(ev) => setPassword(ev.target.value)}
+                  required
+                />
+                <button
+                  type="button"
+                  className="right-2 top-2 button-primary"
+                  style={{ float: 'right', width: '19%'}}
+                  onClick={() => setShowPassword(!showPassword)} // Alternar la visibilidad de la contraseña
+                >
+                  {showPassword ? "Ocultar" : "Mostrar"}
+                </button>
+              </div>
             </label>
 
             <label className={`${role === "MENTOR" ? "" : "mb-6 "}`}>
